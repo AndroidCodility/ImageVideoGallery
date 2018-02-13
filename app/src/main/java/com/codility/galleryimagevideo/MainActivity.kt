@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /* Take Permission Programmatically for WRITE_EXTERNAL_STORAGE */
+        /*
+        * Take Permission Programmatically for WRITE_EXTERNAL_STORAGE
+        * */
         takePermission()
 
         //Click Event For Image Gallery
@@ -61,7 +63,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        /* Set Image in ImageView */
+        /*
+        * Set Image in ImageView
+        * */
         if (requestCode == IMAGE_REQUEST && resultCode == RESULT_OK && null != data) {
             videoView.visibility = View.GONE
             imageView.visibility = View.VISIBLE
@@ -78,7 +82,9 @@ class MainActivity : AppCompatActivity() {
             tvPreview.text = "Image Preview"
         }
 
-        /* Play Video in VideoView */
+        /*
+         * Play Video in VideoView
+         * */
         if (requestCode == VIDEO_REQUEST && resultCode == Activity.RESULT_OK && null != data) {
             imageView.visibility = View.GONE
             videoView.visibility = View.VISIBLE
